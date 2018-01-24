@@ -1,0 +1,31 @@
+app.controller("SearchController", ['$http', function($http) {
+    const self = this;
+    self.search = function (search) {
+    const config = {
+      params: {
+          api_key: 'Hkf2R5G3Dll5kXe6b8b6JXcsrWK0zokF',
+          q: search 
+      }
+    }
+    $http.get('https://api.giphy.com/v1/gifs/search', config)
+    .then(function(response){
+      self.pagination = response.data.pagination.offset;
+      self.count = response.data.pagination.count;
+      self.results = response.data.data;
+      console.log(self.results);
+    })
+    }
+    self.next = function () {
+      self.pagination += 1;
+      if(self.pagination == self.count){
+        self.pagination = 0;
+      }
+    }
+    self.previous = function () {
+      self.pagination -= 1
+      if(self.pagination < 0) {
+        self.pagination = self.count -1;
+      }
+    }
+  }]);
+  
