@@ -1,14 +1,6 @@
 app.controller("RandomController", ['$http', function ($http) {
     const self = this;
   
-    // function AppCtrl() {
-    //   let self = this;
-    //   self.currentNavItem = '/random';
-    
-    //   self.goto = function(page) {
-    //     self.status = "Goto " + page;
-    //   };
-    // };
     self.random = function () {
     const config = {
       params: {
