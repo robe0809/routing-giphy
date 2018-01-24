@@ -4,6 +4,7 @@ app.controller("RandomController", ['GiphyService', function (GiphyService) {
   self.randomBtn = function (){
     GiphyService.random();
   }
+  console.log('random:', self.random);
 
     
 }]);//end controller

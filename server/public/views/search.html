@@ -1,7 +1,7 @@
     <input type="text" id="giphySearch" ng-model="vm.searchGiphy">
-    <button ng-click="vm.search(vm.searchGiphy)">Submit Search</button>
-    <button ng-click="vm.previous()">Previous</button>
-    <button ng-click="vm.next()">Next</button>
-    <div>
-        <img ng-src="{{vm.results[vm.pagination].images.downsized.url}}"/>
+    <button ng-click="vm.searchBtn(vm.searchGiphy)">Submit Search</button>
+    <!-- <button ng-click="vm.previous()">Previous</button>
+    <button ng-click="vm.next()">Next</button> -->
+    <div ng-repeat="result in vm.searchResults.list">
+        <img ng-src="{{result.images.fixed_height_small.url}}"/>
     </div>
