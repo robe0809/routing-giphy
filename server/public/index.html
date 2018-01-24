@@ -12,28 +12,15 @@
   <script src="scripts/client.js"></script>
   <script src="scripts/controllers/random.controller.js"></script>
   <script src="scripts/controllers/search.controller.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body ng-app="giphyApp">
-    <!-- <md-content class="md-padding">
-        <md-nav-bar
-          md-no-ink-bar="disableInkBar"
-          md-selected-nav-item="currentNavItem"
-          nav-bar-aria-label="navigation links">
-          <md-nav-item md-nav-click="goto('/random')" name="random">
-            random
-          </md-nav-item>
-          <md-nav-item md-nav-click="goto('/search')" name="search">
-            search
-          </md-nav-item>
-          <!-- <md-nav-item md-nav-click="goto('page3')" name="page3">
-            Page Three
-          </md-nav-item> --> -->
-  <nav>
-    <ul>
-      <li><a href="#!/search">Search</a></li>
-      <li><a href="#!/random">Random</a></li>
-    </ul>
-  </nav>
+<body ng-app="giphyApp" layout="row" ng-app="myApp" ng-cloak>
+       <nav>
+          <ul>
+            <li><a href="#!/search">Search</a></li>
+            <li><a href="#!/random">Random</a></li>
+          </ul>
+        </nav> 
     <main ng-view>
 
     </main>

@@ -1,4 +1,12 @@
-  var app = angular.module('giphyApp', ['ngRoute', 'ngMaterial']);
+  var app = angular.module('giphyApp', ['ngRoute', 'ngMaterial'])
+  .config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('docs-dark', 'default')
+        .primaryPalette('grey')
+        .warnPalette('red')
+        .accentPalette('blue')
+        .dark();
+
+  });
 
   // app configuration
   app.config(function($routeProvider) {
